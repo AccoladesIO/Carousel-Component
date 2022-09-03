@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100vh;
+}
+html{
+    font-size: 62.5%;
+}
+.slider-container{
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+
+}
+.left-slide{
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+.left-slide > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+}
+button{
+    z-index: 1;
+    color: blue;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    font-weight: bolder;
+    background-color: lavender;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid lightblue;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+button:hover{
+    /* transform: translateY(-3PX); */
+    transition: all 0.4s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+}
+.down-btn{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translateX(-100%);
+    border-radius: 5px 0px 0px 5px;
+}
+.up-btn{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translateY(-100%);
+    border-radius: 0px 5px 5px 0px;
+}
+.left-slide h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    margin-top: -3rem;
+}
+.left-slide p{
+    font-size: 2rem;
+}
+.right-slide{
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    top: 0;
+    left: 35%;
+    transition: all 0.5s ease-in-out;
+}
+.right-slide > div{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
